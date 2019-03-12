@@ -1,0 +1,466 @@
+<!doctype html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, minimal-ui"/>
+	<meta charset="UTF-8">
+	<title>Heads and Hands :: M-commerce :: Создаем мобильные платформы продаж товаров и услуг</title>
+	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"> 
+	<meta name="Author" CONTENT="Heads and Hands">
+	<meta name="keywords" content="Heads and Hands, m-commerce, цифровые сервисы, цифровой сервис, мобильное приложение, мобильные приложения, сайт, веб, web, apple, iOS, Android">
+	<meta name="description" content="Цифровые сервисы будущего на основе web и mobile платформ.">
+	<link rel="stylesheet" type="text/css" href="../basic.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="adaptive.css">
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="js/hammer.js"></script>
+	<script src="js/site.js"></script>
+	<script>
+        $(function(){
+            $(".menu_move_to").click(function(){
+                rel = $(this).attr("rel");
+                element = this
+                move_to = 0;
+                if(rel != ""){
+                    var offset = $("#" + rel).offset();
+                    move_to = offset.top;
+                }
+                $("html, body").stop().animate({
+                        scrollTop: move_to + "px"
+                    }, 1000 , function(){
+                    
+                        history.pushState(rel, $(element).text());
+                        window.location.hash = rel;
+                    });
+                return false;
+            });
+            $(window).scroll(function(){
+                    var items = Array();
+                    $(".mixxcontent .menu_move_to").each(function(i,e){
+                        items.push(e);
+                    }); 
+                    aaa = items.reverse();
+                    $(aaa).each(function(i1,e1){
+                        r1 = $(e1).attr("rel");
+                        if(r1 != ""){
+                            console.log($(aaa).text());
+                            os1 = $("#" + r1).offset();
+                            s1 = $(window).scrollTop();
+                            if(os1.top >= s1){
+                                $(aaa).removeClass("active");   
+                                $(e1).addClass("active");
+                            }
+                        }
+                    });
+            });
+        });
+    </script>
+</head>
+<body>
+	
+	<div class="mainmenu_case">
+		<div class="main_contain">
+			<div class="main_content">
+				<a href="#cases" rel="cases" class="mouse_go menu_move_to">
+					<div class="mouse_go_el"></div>
+				</a>
+				<a href="#cases" rel="cases" class="go_menu menu_move_to">Кейсы</a>
+				<a href="#services" rel="services" class="go_menu menu_move_to">Услуги</a>
+				<a href="#about" rel="about" class="go_menu menu_move_to">Компания</a>
+				<a href="#contacts" rel="contacts" class="go_menu menu_move_to">Контакты</a>
+			</div>
+		</div>
+	</div>
+	<div class="main_contain" id="handh">
+		<div class="maindisplay">
+			<div class="toptop">
+				<div class="main_content">
+					<a href="https://handh.ru/" class="top_logo" target="_blank"><img src="img/logo.svg"></a>
+					<div class="top_logo_dir">M-commerce</div>
+					<a href="#contacts" rel="contacts" class="go_top_contacts menu_move_to">Связаться</a>
+					<div class="go_top_phone font_bold">+7 (812) 407-31-00</div>
+					<a href="mailto:hello@handh.ru" target="_blank" class="go_top_email">hello@handh.ru</a>
+					<div class="cle"></div>
+				</div>
+			</div>
+			<div class="main_title font_bold">
+				Создаем мобильные
+				<br>
+				инструменты продаж
+				<br>
+				ваших товаров
+				<br>
+				и&nbsp;услуг
+			</div>
+			<div class="maindisplay_pic"><img src="img/mainpic.png"></div>
+			<div class="maindisplay_grey"></div>
+		</div>
+		<div class="case_block" id="cases">
+			<div class="case_block_pic block_can_appear" style="background-color: #fec949;">
+				<a href="#" target="_blank" class="case_block_overpic">
+					<table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td align="center" valign="middle">
+								<div class="case_logo"><img src="img/cases/petrovich.svg"></div>
+								<div class="case_logo_title font_bold">Петрович</div>
+								<div class="case_block_overpic_a">Смотреть кейс на&nbsp;сайте Heads&nbsp;and&nbsp;Hands</div>
+							</td>
+						</tr>
+					</table>
+				</a>
+				<div class="case_block_pic_prev block_can_appear" style="box-shadow: 0 0 40px rgba(125,95,35,0.5);">
+					<img src="img/cases/petrovich.png">
+				</div>
+			</div>
+			<div class="case_block_text">
+				<div class="case_block_text_in">
+					<div class="contain_title_case block_can_appear">Кейс</div>
+					<div class="contain_title font_bold block_can_appear">Петрович</div>
+					<div class="contain_text block_can_appear">
+						С помощью приложения «Петрович» пользователь
+						быстро выбирает и покупает стройматериалы
+						и товары для дома. Нашей задачей было перенести
+						весь функционал сайта «Петрович» со всей
+						его сложной архитектурой в интерфейс
+						мобильного приложения.
+					</div>
+					<div class="case_platforms block_can_appear">
+						<div class="case_platform_title">Платформы:</div>
+						<div class="case_platform"><img src="img/android_dl_black.svg"></div>
+						<div class="case_platform"><img src="img/ios_dl_black.svg"></div>
+						<div class="adcle"></div>
+						<div class="case_platform_title goawards">Награды:</div>
+						<div class="case_platform"><img src="img/awards_goldenapp.svg"></div>
+						<div class="case_platform"><img src="img/awards_specia.svg"></div>
+						<div class="cle"></div>
+					</div>
+				</div>
+			</div>
+			<div class="cle"></div>
+		</div>
+		<div class="case_block">
+			<div class="case_block_pic gorevert block_can_appear" style="background-color: #acdb82;">
+				<a href="#" target="_blank" class="case_block_overpic">
+					<table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td align="center" valign="middle">
+								<div class="case_logo"><img src="img/cases/igooods.svg"></div>
+								<div class="case_logo_title font_bold">iGooods</div>
+								<div class="case_block_overpic_a">Смотреть кейс на&nbsp;сайте Heads&nbsp;and&nbsp;Hands</div>
+							</td>
+						</tr>
+					</table>
+				</a>
+				<div class="case_block_pic_prev block_can_appear" style="box-shadow: 0 0 40px rgba(59,83,40,0.5);">
+					<img src="img/cases/igooods.png">
+				</div>
+			</div>
+			<div class="case_block_text gorevert">
+				<div class="case_block_text_in gorevert">
+					<div class="contain_title_case block_can_appear">Кейс</div>
+					<div class="contain_title font_bold block_can_appear">iGooods</div>
+					<div class="contain_text block_can_appear">
+						С помощью приложения «Петрович» пользователь
+						быстро выбирает и покупает стройматериалы
+						и товары для дома. Нашей задачей было перенести
+						весь функционал сайта «Петрович» со всей
+						его сложной архитектурой в интерфейс
+						мобильного приложения.
+					</div>
+					<div class="case_platforms gorevert block_can_appear">
+						<div class="case_platform_title">Платформы:</div>
+						<div class="case_platform"><img src="img/android_dl_black.svg"></div>
+						<div class="case_platform"><img src="img/ios_dl_black.svg"></div>
+						<div class="adcle"></div>
+						<div class="case_platform_title goawards">Награды:</div>
+						<div class="case_platform"><img src="img/awards_goldenapp.svg"></div>
+						<div class="case_platform"><img src="img/awards_specia.svg"></div>
+						<div class="cle"></div>
+					</div>
+				</div>
+			</div>
+			<div class="cle"></div>
+		</div>
+		<div class="case_block block_can_appear">
+			<div class="case_block_pic block_can_appear" style="background-color: #426398;">
+				<a href="#" target="_blank" class="case_block_overpic">
+					<table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td align="center" valign="middle">
+								<div class="case_logo"><img src="img/cases/lamoda.svg"></div>
+								<div class="case_logo_title font_bold">Lamoda</div>
+								<div class="case_block_overpic_a">Смотреть кейс на&nbsp;сайте Heads&nbsp;and&nbsp;Hands</div>
+							</td>
+						</tr>
+					</table>
+				</a>
+				<div class="case_block_pic_prev block_can_appear" style="box-shadow: 0 0 40px rgba(25,38,59,0.5);">
+					<img src="img/cases/lamoda.png">
+				</div>
+			</div>
+			<div class="case_block_text">
+				<div class="case_block_text_in">
+					<div class="contain_title_case block_can_appear">Кейс</div>
+					<div class="contain_title font_bold block_can_appear">Lamoda</div>
+					<div class="contain_text block_can_appear">
+						С помощью приложения «Петрович» пользователь
+						быстро выбирает и покупает стройматериалы
+						и товары для дома. Нашей задачей было перенести
+						весь функционал сайта «Петрович» со всей
+						его сложной архитектурой в интерфейс
+						мобильного приложения.
+					</div>
+					<div class="case_platforms block_can_appear">
+						<div class="case_platform_title">Платформы:</div>
+						<div class="case_platform"><img src="img/android_dl_black.svg"></div>
+						<div class="case_platform"><img src="img/ios_dl_black.svg"></div>
+						<div class="adcle"></div>
+						<div class="case_platform_title goawards">Награды:</div>
+						<div class="case_platform"><img src="img/awards_goldenapp.svg"></div>
+						<div class="case_platform"><img src="img/awards_specia.svg"></div>
+						<div class="cle"></div>
+					</div>
+				</div>
+			</div>
+			<div class="cle"></div>
+		</div>
+		<a href="#" target="_blank" class="allcases_handh block_can_appear">
+			<div class="main_content">
+				<div class="allcases_handh_ico"><img src="img/goallcases.svg"></div>
+				Все кейсы Heads&nbsp;and&nbsp;Hands <span class="allcases_handh_br">на&nbsp;сайте компании</span>
+			</div>
+		</a>
+		<div class="block_contain" id="services">
+			<div class="main_content">
+				<div class="contain_title font_bold block_can_appear">Услуги в m-commerce</div>
+				<div class="block_services block_can_appear">
+					<div class="block_service">
+						<div class="block_service_pic">
+							<img src="img/services_ico_design.svg">
+						</div>
+						<div class="block_service_title font_bold">Дизайн</div>
+						<div class="contain_text">
+							С помощью приложения «Петрович» пользователь
+							быстро выбирает и покупает стройматериалы
+							и товары для дома.
+						</div>
+					</div>
+					<div class="block_service">
+						<div class="block_service_pic">
+							<img src="img/services_ico_develop.svg">
+						</div>
+						<div class="block_service_title font_bold">Разработка</div>
+						<div class="contain_text">
+							С помощью приложения «Петрович» пользователь
+							быстро выбирает и покупает стройматериалы
+							и товары для дома.
+						</div>
+					</div>
+					<div class="block_service">
+						<div class="block_service_pic">
+							<img src="img/services_ico_progress.svg">
+						</div>
+						<div class="block_service_title font_bold">Развитие</div>
+						<div class="contain_text">
+							С помощью приложения «Петрович» пользователь
+							быстро выбирает и покупает стройматериалы
+							и товары для дома.
+						</div>
+					</div>
+					<div class="cle"></div>
+				</div>
+			</div>
+		</div>
+		<div class="company_big_photo block_can_appear">
+			<img src="img/company_big_photo.jpg">
+		</div>
+		<div class="block_contain gogrey" id="about">
+			<div class="main_content">
+				<div class="about_block">
+					<div class="contain_title font_bold block_can_appear">Компания</div>
+					<div class="contain_text block_can_appear">
+						С помощью приложения «Петрович» пользователь
+						быстро выбирает и покупает стройматериалы
+						и товары для дома. Нашей задачей было перенести
+						весь функционал сайта «Петрович» со всей
+						его сложной архитектурой в интерфейс
+						мобильного приложения.
+						<br><br>
+						С помощью приложения «Петрович» пользователь
+						быстро выбирает и покупает стройматериалы
+						и товары для дома.
+					</div>
+				</div>
+				<div class="about_block_numbers">
+					<div class="contain_title font_bold block_can_appear">В цифрах</div>
+					<div class="contain_text block_can_appear">
+						<span class="font_bold">ТОП 6</span> — лучших компаний России*
+						<br>
+						<span class="font_bold">2012</span> — год основания
+						<br>
+						<span class="font_bold">107</span> — человек в команде
+						<br>
+						<span class="font_bold">173</span> — реализованных проекта
+						<br>
+						<span class="font_bold">28</span> — престижных наград
+					</div>
+				</div>
+				<div class="cle"></div>
+			</div>
+		</div>
+		<div class="block_team">
+			<div class="team_block">
+				<div class="next_team">
+					<a href="#" class="next_team_ico"><img src="img/next_team.svg"></a>
+				</div>
+				<div class="main_content block_can_appear">
+					<div class="team_block_case">
+						<div class="team_block_title">
+							<div class="team_block_title_name font_bold">Александр</div>
+							<div class="team_block_title_pos">CEO</div>
+						</div>
+						<div class="team_block_case_pic">
+							<img src="img/people/alex.png">
+						</div>
+					</div>
+					<div class="team_block_case">
+						<div class="team_block_title">
+							<div class="team_block_title_name font_bold">Илхом</div>
+							<div class="team_block_title_pos">Heads of Production</div>
+						</div>
+						<div class="team_block_case_pic">
+							<img src="img/people/alex.png">
+						</div>
+					</div>
+					<div class="team_block_case">
+						<div class="team_block_title">
+							<div class="team_block_title_name font_bold">Стас</div>
+							<div class="team_block_title_pos">Business Analyst</div>
+						</div>
+						<div class="team_block_case_pic">
+							<img src="img/people/alex.png">
+						</div>
+					</div>
+					<div class="team_block_case">
+						<div class="team_block_title">
+							<div class="team_block_title_name font_bold">Игорь</div>
+							<div class="team_block_title_pos">TeamLead Android</div>
+						</div>
+						<div class="team_block_case_pic">
+							<img src="img/people/alex.png">
+						</div>
+					</div>
+					<div class="cle"></div>
+				</div>
+			</div>
+		</div>
+		<div class="block_contain">
+			<div class="main_content">
+				<div class="contain_title font_bold block_can_appear">С нами работают</div>
+				<div class="clients block_can_appear">
+					<div class="client_logo">
+						<img src="img/clients/lamoda.svg">
+					</div>
+					<div class="client_logo">
+						<img src="img/clients/petrovich.svg">
+					</div>
+					<div class="client_logo">
+						<img src="img/clients/ginza.svg">
+					</div>
+					<div class="client_logo">
+						<img src="img/clients/tcs.svg">
+					</div>
+					<div class="client_logo">
+						<img src="img/clients/kaspersky.svg">
+					</div>
+					<div class="client_logo">
+						<img src="img/clients/mail.svg">
+					</div>
+					<div class="client_logo">
+						<img src="img/clients/yandex.svg">
+					</div>
+					<div class="client_logo">
+						<img src="img/clients/samsung.svg">
+					</div>
+					<div class="client_logo">
+						<img src="img/clients/zakazaka.svg">
+					</div>
+					<div class="client_logo">
+						<img src="img/clients/homecredit.svg">
+					</div>
+					<div class="client_logo">
+						<img src="img/clients/abbyy.svg">
+					</div>
+					<div class="client_logo">
+						<img src="img/clients/s7.svg">
+					</div>
+					<div class="client_logo">
+						<img src="img/clients/leroymerlin.svg">
+					</div>
+					<div class="client_logo">
+						<img src="img/clients/invitro.svg">
+					</div>
+					<div class="client_logo">
+						<img src="img/clients/landrover.svg">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="block_contain gogrey block_can_appear" id="contacts">
+			<div class="main_content">
+				<div class="about_block">
+					<div class="contain_title font_bold block_can_appear">Москва</div>
+					<div class="contain_text block_can_appear">
+						<span class="font_bold">Представительство</span>
+						<br>
+						Телефон: +7 (495) 565-30-74
+						
+					</div>
+				</div>
+				<div class="about_block_numbers">
+					<div class="contain_title font_bold block_can_appear">Санкт-Петербург</div>
+					<div class="contain_text block_can_appear">
+						<span class="font_bold">Головной офис компании</span>
+						<br>
+						Адрес: наб. Обводного канала, 199-201
+						<br>
+						Телефон: +7 (812) 407-31-00
+						<br>
+						Почта: <a href="mailto:hello@handh.ru" target="_blank" class="about_email">hello@handh.ru</a>
+						
+					</div>
+				</div>
+				<div class="cle"></div>
+			</div>
+		</div>
+		<a href="#" target="_blank" class="allcases_handh gocontacts block_can_appear">
+			<div class="main_content">
+				<div class="allcases_handh_ico"><img src="img/goallcases.svg"></div>
+				Оставить заявку <span class="allcases_handh_br">на&nbsp;консультацию</span>
+			</div>
+		</a>
+		<div class="footer block_can_appear">
+			<a href="#handh" rel="handh" class="footer_logo block_can_appear menu_move_to"><img src="img/footer_logo.svg"></a>
+			<div class="footer_social block_can_appear">
+				<a href="#" target="_blank"><img src="img/social/be.svg"></a>
+				<a href="#" target="_blank"><img src="img/social/dr.svg"></a>
+				<a href="#" target="_blank"><img src="img/social/insta.svg"></a>
+				<a href="#" target="_blank"><img src="img/social/tw.svg"></a>
+				<a href="#" target="_blank"><img src="img/social/fb.svg"></a>
+				<a href="#" target="_blank"><img src="img/social/vk.svg"></a>
+				<a href="#" target="_blank"><img src="img/social/yt.svg"></a>
+			</div>
+			<div class="block_can_appear">
+				<a href="https://tagline.ru/heads-and-hands" target="_blank" class="footer_desc">
+					*Heads and Hands на&nbsp;шестом&nbsp;месте
+					<br>
+					среди лучших мобильных разработчиков&nbsp;России
+					<br>
+					по&nbsp;версии&nbsp;Tagline
+				</a>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
