@@ -1,0 +1,91 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 0;
+  -webkit-tap-highlight-color:rgba(255,255,255,0);
+}
+
+html{
+	width: 100%;
+	height: 100%;	
+}
+
+body{ 
+	background-color: #fff;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	text-decoration:none;
+	font-family: mreg, Tahoma, Geneva, sans-serif;
+	font-size: 16px;
+	line-height: 20px;
+	color: #000;
+	overflow-x: hidden;
+}
+
+a{
+	text-decoration: none !important;
+}
+
+img{
+	border: none;
+	display: block;	
+}
+
+sup{
+	line-height:0;	
+}
+
+.cle{
+	clear: both;	
+}
+
+/* --- FONTS --- */
+
+@font-face {
+    font-family: "mreg";
+    src: url("fonts/mreg.otf"); 
+}
+
+@font-face {
+    font-family: "mmed";
+    src: url("fonts/mmed.otf"); 
+}
+
+@font-face {
+    font-family: "mbold";
+    src: url("fonts/mbold.otf"); 
+}
+
+@font-face {
+    font-family: "mlight";
+    src: url("fonts/mlight.otf"); 
+}
+
+@font-face {
+    font-family: "mital";
+    src: url("fonts/mital.otf"); 
+}
+
+.font_reg{
+	font-family: mreg, Tahoma, Geneva, sans-serif;
+}
+
+.font_med{
+	font-family: mmed, Tahoma, Geneva, sans-serif;
+}
+
+.font_bold{
+	font-family: mbold, Tahoma, Geneva, sans-serif;
+}
+
+.font_light{
+	font-family: mlight, Tahoma, Geneva, sans-serif;
+}
+
+.font_ital{
+	font-family: mital, Tahoma, Geneva, sans-serif;
+}
