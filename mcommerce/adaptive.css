@@ -202,6 +202,10 @@
 		display: none;
 	}
 	
+	.main_go_cases_but{
+		display: none;
+	}
+	
 	.toptop{
 		position: relative;
 		top: 20px;
