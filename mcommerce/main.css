@@ -14,12 +14,12 @@
 }
 
 .toptop{
-	position: absolute;
+	position: fixed;
 	top: 40px;
 	left: 0;
 	width: 100%;
 	height: 50px;
-	z-index: 110;
+	z-index: 150;
 }
 
 .main_content{
@@ -86,18 +86,29 @@
 	color: #000;
 }
 
-.go_top_email{
+.go_top_pres{
 	float: right;
 	font-size: 24px;
 	line-height: 50px;
 	color: #000;
-	text-decoration: underline !important;
+	transition: opacity 0.3s;
+}
+
+.go_top_pres:hover{
+	opacity: 0.5;
+}
+
+.go_top_email{
+	float: right;
+	font-size: 24px;
+	line-height: 50px;
+	margin-left: 40px;
+	color: #000;
 	transition: opacity 0.3s;
 }
 
 .go_top_email:hover{
 	opacity: 0.5;
-	text-decoration: none !important;
 }
 
 .main_title{
@@ -122,14 +133,21 @@
 	height: auto;
 }
 
-.maindisplay_grey{
+.maindisplay_circle{
 	position: absolute;
-	top: 0;
-	right: 0;
+	top: -100px;
+	right: 5%;
 	width: 50%;
-	height: 100%;
+	height: auto;
 	background-color: #f1f1f1;
+	border-radius: 1000px;
+	overflow: hidden;
 	z-index: 100;
+}
+
+.maindisplay_circle img{
+	width: 100%;
+	height: auto;
 }
 
 .mainmenu_case{
@@ -272,18 +290,16 @@
 }
 
 .case_block_overpic_a{
-	text-decoration: underline !important;
 	transition: opacity 0.3s;
 }
 
 .case_block_overpic_a:hover{
-	text-decoration: none !important;
 	opacity: 0.5;
 }
 
 .case_block_pic_prev{
 	position: absolute;
-	top: 100px;
+	top: 110px;
 	left: 50%;
 	width: 360px;
 	margin-left: -180px;
@@ -365,7 +381,6 @@
 	font-size: 24px;
 	line-height: 50px;
 	margin-top: 40px;
-	text-decoration: underline !important;
 	transition: all 0.3s;
 	z-index: 5;
 }
@@ -373,7 +388,6 @@
 .allcases_handh:hover{
 	background-color: #fcd137;
 	color: #000;
-	text-decoration: none !important;
 }
 
 .allcases_handh.gocontacts{
@@ -433,6 +447,11 @@
 
 .block_contain.gogrey{
 	background-color: #f1f1f1;
+}
+
+.block_contain.gocontacts{
+	color: #fff;
+	background-color: #292929;
 }
 
 .company_big_photo{
@@ -527,7 +546,7 @@
 }
 
 .about_block a{
-	color: #000;
+	color: #fff;
 }
 
 .about_block_numbers{
@@ -539,17 +558,32 @@
 }
 
 .about_block_numbers a{
-	color: #000;
+	color: #fff;
+}
+
+.about_number_case{
+	float: left;
+	width: 50%;
+	height: 100px;
+	padding-right: 50px;
+	box-sizing: border-box;
+	font-size: 14px;
+	line-height: 18px;
+	vertical-align: top;
+}
+
+.about_number{
+	font-size: 36px;
+	line-height: 36px;
+	margin-bottom: 4px;
 }
 
 .about_email{
-	color: #000;
-	text-decoration: underline !important;
+	color: #fff;
 	transition: opacity 0.3s;
 }
 
 .about_email:hover{
-	text-decoration: none !important;
 	opacity: 0.5;
 }
 
@@ -609,7 +643,6 @@
 
 .footer_social{
 	text-align: center;
-	margin-bottom: 40px;
 }
 
 .footer_social a{
@@ -644,9 +677,262 @@
 	opacity: 1;
 }
 
+.footer_line{
+	display: block;
+	width: 70%;
+	height: 1px;
+	background-color: #fff;
+	opacity: 0.3;
+	margin: 0 auto;
+	margin-top: 100px;
+	margin-bottom: 50px;
+}
+
 .adcle{
 	display: none;
 	clear: both;
+}
+
+.feed_ico{
+	float: left;
+	width: 120px;
+	height: auto;
+	margin-right: 100px;
+}
+
+.feed_ico img{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.feed_text{
+	float: left;
+	width: 800px;
+}
+
+.feed_but{
+	display: block;
+	float: right;
+	width: 240px;
+	height: 60px;
+	border-radius: 30px;
+	background-color: #fbcf4d;
+	overflow: hidden;
+	text-align: center;
+	color: #000;
+	font-size: 30px;
+	line-height: 60px;
+	transition: all 0.3s;
+}
+
+.feed_but:hover{
+	color: #fff;
+	background-color: #000;
+}
+
+/* LEFT POINT MENU ------------------------------- */
+
+.left_points_menu{
+	position: fixed;
+	left: 0;
+	bottom: 50px;
+	width: 100px;
+	text-align: center;
+	z-index: 110;
+}
+
+.point_menu{
+	display: block;
+	position: relative;
+	width: 20px;
+	height: 20px;
+	margin: 10px auto;
+}
+
+.point_inside{
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	width: 8px;
+	height: 8px;
+	background-color: #000;
+	opacity: 0.5;
+	border-radius: 10px;
+	transition: all 0.3s;
+}
+
+.point_inside.point_1{
+	-webkit-animation: point_ani_1 4s ease infinite;
+	animation: point_ani_1 4s ease infinite;
+}
+
+@keyframes point_ani_1 {
+  	0% { 
+		top: 6px;
+		left: 6px;
+		width: 8px;
+		height: 8px;
+		opacity: 0.5;
+	}
+	10% { 
+		top: 0px;
+		left: 0px;
+		width: 20px;
+		height: 20px;
+		opacity: 1;
+	}
+	20% { 
+		top: 6px;
+		left: 6px;
+		width: 8px;
+		height: 8px;
+		opacity: 0.5;
+	}
+}
+
+.point_inside.point_2{
+	-webkit-animation: point_ani_2 4s ease infinite;
+	animation: point_ani_2 4s ease infinite;
+}
+
+@keyframes point_ani_2 {
+  	0% { 
+		top: 6px;
+		left: 6px;
+		width: 8px;
+		height: 8px;
+		opacity: 0.5;
+	}
+	10% { 
+		top: 6px;
+		left: 6px;
+		width: 8px;
+		height: 8px;
+		opacity: 0.5;
+	}
+	20% { 
+		top: 0px;
+		left: 0px;
+		width: 20px;
+		height: 20px;
+		opacity: 1;
+	}
+	30% { 
+		top: 6px;
+		left: 6px;
+		width: 8px;
+		height: 8px;
+		opacity: 0.5;
+	}
+}
+
+.point_inside.point_3{
+	-webkit-animation: point_ani_3 4s ease infinite;
+	animation: point_ani_3 4s ease infinite;
+}
+
+@keyframes point_ani_3 {
+  	0% { 
+		top: 6px;
+		left: 6px;
+		width: 8px;
+		height: 8px;
+		opacity: 0.5;
+	}
+	20% { 
+		top: 6px;
+		left: 6px;
+		width: 8px;
+		height: 8px;
+		opacity: 0.5;
+	}
+	30% { 
+		top: 0px;
+		left: 0px;
+		width: 20px;
+		height: 20px;
+		opacity: 1;
+	}
+	40% { 
+		top: 6px;
+		left: 6px;
+		width: 8px;
+		height: 8px;
+		opacity: 0.5;
+	}
+}
+
+.point_inside.point_4{
+	-webkit-animation: point_ani_4 4s ease infinite;
+	animation: point_ani_4 4s ease infinite;
+}
+
+@keyframes point_ani_4 {
+  	0% { 
+		top: 6px;
+		left: 6px;
+		width: 8px;
+		height: 8px;
+		opacity: 0.5;
+	}
+	30% { 
+		top: 6px;
+		left: 6px;
+		width: 8px;
+		height: 8px;
+		opacity: 0.5;
+	}
+	40% { 
+		top: 0px;
+		left: 0px;
+		width: 20px;
+		height: 20px;
+		opacity: 1;
+	}
+	50% { 
+		top: 6px;
+		left: 6px;
+		width: 8px;
+		height: 8px;
+		opacity: 0.5;
+	}
+}
+
+.point_inside.point_5{
+	-webkit-animation: point_ani_5 4s ease infinite;
+	animation: point_ani_5 4s ease infinite;
+}
+
+@keyframes point_ani_5 {
+  	0% { 
+		top: 6px;
+		left: 6px;
+		width: 8px;
+		height: 8px;
+		opacity: 0.5;
+	}
+	40% { 
+		top: 6px;
+		left: 6px;
+		width: 8px;
+		height: 8px;
+		opacity: 0.5;
+	}
+	50% { 
+		top: 0px;
+		left: 0px;
+		width: 20px;
+		height: 20px;
+		opacity: 1;
+	}
+	60% { 
+		top: 6px;
+		left: 6px;
+		width: 8px;
+		height: 8px;
+		opacity: 0.5;
+	}
 }
 
 /* BASIC ANIMATION ------------------------------- */

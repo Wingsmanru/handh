@@ -29,6 +29,11 @@
 		padding: 0 50px;
 	}
 	
+	.left_points_menu{
+		bottom: 20px;
+		width: 50px;
+	}
+	
 	.main_title{
 		left: 218px;
 		font-size: 50px;
@@ -67,10 +72,16 @@
 	
 	.go_top_phone{
 		font-size: 18px;
+		margin-left: 20px;
+	}
+	
+	.go_top_pres{
+		font-size: 18px;
 	}
 	
 	.go_top_email{
 		font-size: 18px;
+		margin-left: 20px;
 	}
 	
 	.contain_title_case{
@@ -134,6 +145,22 @@
 		margin: 40px 50px;
 	}
 	
+	.about_number_case{
+		height: 120px;
+	}
+	
+	.feed_text{
+		float: left;
+		width: 600px;
+	}
+	
+	.feed_but{
+		width: 180px;
+		height: 50px;
+		font-size: 24px;
+		line-height: 50px;
+	}
+	
 }
 
 @media (max-width : 1200px) {
@@ -142,6 +169,31 @@
 		left: 50px;
 	}
 	
+	.about_number_case{
+		float: none;
+		width: 100%;
+		height: auto;
+		margin-bottom: 20px;
+	}
+	
+	.feed_ico{
+		float: none;
+		margin-bottom: 30px;
+	}
+	
+	.feed_text{
+		float: none;
+		width: 100%;
+		margin-bottom: 40px;
+	}
+	
+	.feed_but{
+		float: none;
+		width: 140px;
+		height: 40px;
+		font-size: 18px;
+		line-height: 40px;
+	}
 }
 
 @media (max-width : 1020px) {
@@ -160,6 +212,10 @@
 		padding: 0 20px;
 	}
 	
+	.left_points_menu{
+		display: none;
+	}
+	
 	.top_logo_dir{
 		display: none;
 	}
@@ -169,6 +225,10 @@
 	}
 	
 	.go_top_email{
+		display: none;
+	}
+	
+	.go_top_pres{
 		display: none;
 	}
 	
@@ -184,7 +244,7 @@
 		height: auto;
 	}
 	
-	.maindisplay_grey{
+	.maindisplay_circle{
 		display: none;
 	}
 	
