@@ -425,6 +425,10 @@
 		clear: both;
 	}
 	
+	.next_team{
+		width: 120px;
+	}
+	
 }
 
 @media (max-width : 600px) {

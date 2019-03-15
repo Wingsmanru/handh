@@ -140,6 +140,14 @@
 	right: 100px;
 	width: 800px;
 	z-index: 106;
+	-webkit-animation: maindisplay_pic_ani 4s ease infinite;
+	animation: maindisplay_pic_ani 4s ease infinite;
+}
+
+@keyframes maindisplay_pic_ani {
+  	0% { bottom: -50px; }
+  	50% { bottom: -100px; }
+	100% { bottom: -50px; }
 }
 
 .maindisplay_pic img{
@@ -157,6 +165,14 @@
 	border-radius: 1000px;
 	overflow: hidden;
 	z-index: 100;
+	-webkit-animation: maindisplay_circle_ani 4s ease infinite;
+	animation: maindisplay_circle_ani 4s ease infinite;
+}
+
+@keyframes maindisplay_circle_ani {
+  	0% { top: -100px; }
+  	50% { top: -150px; }
+	100% { top: -100px; }
 }
 
 .maindisplay_circle img{
