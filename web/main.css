@@ -453,11 +453,11 @@
 
 .block_service{
 	float: left;
-	display: inline;
 	width: 33%;
+	height: auto;
 	padding-right: 100px;
 	box-sizing: border-box;
-	vertical-align: middle;
+	margin-bottom: 30px;
 }
 
 .block_service_pic{
