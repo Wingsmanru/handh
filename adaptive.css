@@ -391,6 +391,10 @@
 		width: 80%;
 	}
 	
+	.block_line{
+		display: block;
+	}
+	
 	.block_can_appear {
 		opacity: 1;
 		transform:  translate(0px, 0px);
