@@ -1,33 +1,509 @@
 <!doctype html>
 <html>
 <head>
+	
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-NHVFN4C');</script>
+	<!-- End Google Tag Manager -->
+	
 	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, minimal-ui"/>
 	<meta charset="UTF-8">
-	<title>Heads and Hands :: Цифровые сервисы будущего</title>
+	<title>Heads and Hands :: Web и mobile сервисы</title>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
 	<meta name="Author" CONTENT="Heads and Hands">
 	<meta name="keywords" content="Heads and Hands, m-commerce, цифровые сервисы, цифровой сервис, мобильное приложение, мобильные приложения, сайт, веб, web, apple, iOS, Android">
-	<meta name="description" content="Цифровые сервисы будущего на основе web и mobile платформ">
+	<meta name="description" content="Для автоматизации бизнес-процессов, масштабирования продаж, увеличения конверсии и LTV.">
+	<link rel="stylesheet" type="text/css" href="basic.css">
 	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="styles/slick-theme.css">
+	<link rel="stylesheet" type="text/css" href="styles/slick.css">
 	<link rel="stylesheet" type="text/css" href="adaptive.css">
+	
+	<meta property="og:title" content="Heads and Hands :: Web и mobile сервисы">
+	<meta property="og:description" content="Для автоматизации бизнес-процессов, масштабирования продаж, увеличения конверсии и LTV.">
+	<meta property="og:site_name" content="Heads and Hands :: Web">
+	<meta property="og:url" content="https://future.handh.ru/">
+	<meta property="og:image" content="https://future.handh.ru/fb.png">
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta property="twitter:title" content="Heads and Hands :: Web и mobile сервисы">
+	<meta property="twitter:description" content="Для автоматизации бизнес-процессов, масштабирования продаж, увеличения конверсии и LTV.">
+	<meta property="twitter:url" content="https://future.handh.ru/">
+	<meta property="twitter:image" content="https://future.handh.ru/tw.png">
+
+	<meta property="vk:image"  content="https://future.handh.ru/vk.png">
+	
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="js/hammer.js"></script>
+	<script src="js/site.js"></script>
+	<script src="js/slick.js"></script>
+	<script>
+        $(function(){
+            $(".menu_move_to").click(function(){
+                rel = $(this).attr("rel");
+                element = this
+                move_to = 0;
+                if(rel != ""){
+                    var offset = $("#" + rel).offset();
+                    move_to = offset.top;
+                }
+                $("html, body").stop().animate({
+                        scrollTop: move_to + "px"
+                    }, 1000 , function(){
+                    
+                        history.pushState(rel, $(element).text());
+                        window.location.hash = rel;
+                    });
+                return false;
+            });
+            $(window).scroll(function(){
+                    var items = Array();
+                    $(".mixxcontent .menu_move_to").each(function(i,e){
+                        items.push(e);
+                    }); 
+                    aaa = items.reverse();
+                    $(aaa).each(function(i1,e1){
+                        r1 = $(e1).attr("rel");
+                        if(r1 != ""){
+                            console.log($(aaa).text());
+                            os1 = $("#" + r1).offset();
+                            s1 = $(window).scrollTop();
+                            if(os1.top >= s1){
+                                $(aaa).removeClass("active");   
+                                $(e1).addClass("active");
+                            }
+                        }
+                    });
+            });
+						$('#team').slick({ 
+							draggable: false,   
+							slidesToShow: 3,
+							slidesToScroll: 1,
+							variableWidth: true,
+							nextArrow: $('#team__next-slide'),
+							infinite: true,
+						});
+        });
+    </script>
 </head>
 <body>
 	
-	<table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
-		<tr>
-			<td valign="middle" align="center">
-				<div class="logo">
-					<a href="https://handh.ru/"><img src="index/img/logo.svg"></a>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHVFN4C"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	
+	<!--
+	<div class="mainmenu_case">
+		<div class="main_contain">
+			<div class="main_content">
+				<a href="#cases" rel="cases" class="mouse_go menu_move_to">
+					<div class="mouse_go_el"></div>
+				</a>
+				<a href="#cases" rel="cases" class="go_menu menu_move_to">Кейсы</a>
+				<a href="#services" rel="services" class="go_menu menu_move_to">Услуги</a>
+				<a href="#about" rel="about" class="go_menu menu_move_to">Компания</a>
+				<a href="#contacts" rel="contacts" class="go_menu menu_move_to">Контакты</a>
+			</div>
+		</div>
+	</div>
+	-->
+	<div class="toptop">
+		<div class="main_content">
+			<a href="https://future.handh.ru/" class="top_logo" target="_blank"><img src="img/logo.svg"></a>
+			<div class="top_logo_dir">Web и Mobile</div>
+			<a href="https://docs.google.com/forms/d/1uB41LDzPe3cgJQiVIhhlWv4D2rWBODq35saL-mmd2AM/viewform?edit_requested=true" target="_blank" class="go_top_contacts">Связаться</a>
+			<div class="go_top_phone font_bold">+7 (812) 407-31-00</div>
+			<a href="mailto:hello@handh.ru" target="_blank" class="go_top_email">hello@handh.ru</a>
+			<a href="hh.pdf" target="_blank" class="go_top_pres">Скачать PDF &darr;</a>
+			<div class="cle"></div>
+		</div>
+	</div>
+	<div class="left_points_menu">
+		<a href="#handh" rel="handh" class="point_menu menu_move_to"><div class="point_inside point_1"></div></a>
+		<a href="#dir" rel="dir" class="point_menu menu_move_to"><div class="point_inside point_2"></div></a>
+		<a href="#about" rel="about" class="point_menu menu_move_to"><div class="point_inside point_3"></div></a>
+		<a href="#contacts" rel="contacts" class="point_menu menu_move_to"><div class="point_inside point_4"></div></a>
+	</div>
+	<div class="main_contain" id="handh">
+		<div class="maindisplay">
+			<div class="main_title font_bold">
+				<!--
+				Создаем веб-сервисы 
+				<br>
+				со сложной архитектурой 
+				<br>
+				и большими массивами
+				<br>
+				данных
+				-->
+				Автоматизация 
+				<br>
+				бизнес-процессов, 
+				<br>
+				масштабирование продаж,
+				<br>
+				увеличение конверсии
+				<br>
+				и&nbsp;LTV
+				<a href="#dir" rel="dir" class="main_go_cases_but menu_move_to font_reg">&#9658; Направления компании</a>
+			</div>
+			<div class="maindisplay_pic"><img src="img/mainpic.png"></div>
+			<div class="maindisplay_circle"><img src="img/grad.png"></div>
+		</div>
+		<div class="case_block" id="dir">
+			<div class="case_block_pic block_can_appear" style="background-color: #fec949;">
+				<a href="mcommerce/" target="_blank" class="case_block_overpic">
+					<table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td align="center" valign="middle">
+								<div class="case_logo"><img src="img/cases/next.svg"></div>
+								<div class="case_logo_title font_bold">Перейти</div>
+								<div class="case_block_overpic_a">в раздел по M-commerce</div>
+							</td>
+						</tr>
+					</table>
+				</a>
+				<div class="case_block_pic_prev block_can_appear" style="box-shadow: 0 0 40px rgba(125,95,35,0.5);">
+					<img src="img/cases/petrovich.jpg">
 				</div>
-				<div class="bigtitle font_med">
-					Web и&nbsp;mobile сервисы
+			</div>
+			<div class="case_block_text">
+				<div class="case_block_text_in">
+					<div class="contain_title_case block_can_appear">Направление</div>
+					<div class="contain_title font_bold block_can_appear">M-commerce</div>
+					<div class="contain_text block_can_appear">
+						Разработка мобильных инструментов продаж товаров и услуг.
+					</div>
+					<div class="case_platforms block_can_appear">
+						<div class="case_platform_title"><a href="mcommerce/">&#9658; Перейти в раздел</a></div>
+						<!--
+						<div class="case_platform_title">Платформа:</div>
+						<div class="case_platform"><img src="img/web_dl_black.svg"></div>
+						<div class="adcle"></div>
+						-->
+						<!--<div class="case_platform_title goawards"><span class="font_bold">5</span> наград</div>-->
+						<div class="cle"></div>
+					</div>
 				</div>
-				<div class="subtitle font_light">
-					Для автоматизации бизнес-процессов, масштабирования продаж, увеличения конверсии и&nbsp;LTV
+			</div>
+			<div class="cle"></div>
+		</div>
+		<div class="case_block">
+			<div class="case_block_pic gorevert block_can_appear" style="background-color: #343434;">
+				<a href="web/" target="_blank" class="case_block_overpic">
+					<table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td align="center" valign="middle">
+								<div class="case_logo"><img src="img/cases/next.svg"></div>
+								<div class="case_logo_title font_bold">Перейти</div>
+								<div class="case_block_overpic_a">в раздел по Web</div>
+							</td>
+						</tr>
+					</table>
+				</a>
+				<div class="case_block_pic_prev goweb block_can_appear" style="box-shadow: 0 0 40px rgba(0,0,0,0.5);">
+					<img src="img/cases/kaspersky.jpg">
 				</div>
-			</td>
-		</tr>
-	</table>
+			</div>
+			<div class="case_block_text gorevert">
+				<div class="case_block_text_in gorevert">
+					<div class="contain_title_case block_can_appear">Направление</div>
+					<div class="contain_title font_bold block_can_appear">Web</div>
+					<div class="contain_text block_can_appear">
+						Веб-сервисы под ключ: от e-commerce до высоконагруженных информационных систем.
+					</div>
+					<div class="case_platforms gorevert block_can_appear">
+						<div class="case_platform_title"><a href="web/">&#9658; Перейти в раздел</a></div>
+						<!--
+						<div class="case_platform_title">Платформа:</div>
+						<div class="case_platform"><img src="img/web_dl_black.svg"></div>
+						<div class="adcle"></div>
+						-->
+						<!--<div class="case_platform_title goawards"><span class="font_bold">5</span> наград</div>-->
+						<div class="cle"></div>
+					</div>
+				</div>
+			</div>
+			<div class="cle"></div>
+		</div>
+		
+		
+		<div class="block_contain">
+			<div class="main_content">
+				<div class="contain_title font_bold block_can_appear">С нами работают</div>
+				<div class="clients block_can_appear">
+					<div class="client_logo">
+						<img src="img/clients/lamoda.svg">
+					</div>
+					<div class="client_logo">
+						<img src="img/clients/petrovich.svg">
+					</div>
+					<div class="client_logo">
+						<img src="img/clients/ginza.svg">
+					</div>
+					<div class="client_logo">
+						<img src="img/clients/tcs.svg">
+					</div>
+					<div class="client_logo">
+						<img src="img/clients/kaspersky.svg">
+					</div>
+					<div class="client_logo">
+						<img src="img/clients/mail.svg">
+					</div>
+					<div class="client_logo">
+						<img src="img/clients/yandex.svg">
+					</div>
+					<div class="client_logo">
+						<img src="img/clients/samsung.svg">
+					</div>
+					<div class="client_logo">
+						<img src="img/clients/zakazaka.svg">
+					</div>
+					<div class="client_logo">
+						<img src="img/clients/homecredit.svg">
+					</div>
+					<div class="client_logo">
+						<img src="img/clients/abbyy.svg">
+					</div>
+					<div class="client_logo">
+						<img src="img/clients/s7.svg">
+					</div>
+					<div class="client_logo">
+						<img src="img/clients/leroymerlin.svg">
+					</div>
+					<div class="client_logo">
+						<img src="img/clients/invitro.svg">
+					</div>
+					<div class="client_logo">
+						<img src="img/clients/landrover.svg">
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="block_contain gogrey" id="about">
+			<div class="main_content">
+				<div class="about_block">
+					<div class="contain_title font_bold block_can_appear">Компания</div>
+					<div class="contain_text block_can_appear">
+						Разрабатываем сложные web и&nbsp;mobile сервисы&nbsp;прицелом на рост продаж и&nbsp;LTV клиента, а&nbsp;также снижение издержек бизнеса.
+						<br><br>
+						Большой опыт в&nbsp;создании онлайн-магазинов нового поколения, служб доставки, личных кабинетов, программ лояльности, систем бронирования, электронных бирж и&nbsp;маркетплейсов.
+					</div>
+				</div>
+				<div class="about_block_numbers">
+					<div class="contain_title font_bold block_can_appear">В цифрах</div>
+					<div class="contain_text block_can_appear">
+						<div class="about_number_case">
+							<div class="about_number font_bold">ТОП 6</div>
+							лучших компаний России по версии Tagline
+						</div>
+						<div class="about_number_case">
+							<div class="about_number font_bold">2012</div>
+							год основания компании
+						</div>
+						<div class="about_number_case">
+							<div class="about_number font_bold">100+</div>
+							человек в команде
+						</div>
+						<div class="about_number_case">
+							<div class="about_number font_bold">150+</div>
+							реализованных проектов
+						</div>
+						<div class="cle"></div>
+					</div>
+				</div>
+				<div class="cle"></div>
+			</div>
+		</div>
+		<div class="block_team">
+			<div class="team_block">
+				<div class="next_team" >
+					<a href="#" class="next_team_ico" id="team__next-slide"><img src="img/next_team.svg"></a>
+				</div>
+				<div class="main_content block_can_appear" id="team">
+					<div class="team_block_case">
+						<div class="team_block_title">
+							<div class="team_block_title_name font_bold">Александр</div>
+							<div class="team_block_title_pos">CEO</div>
+						</div>
+						<div class="team_block_case_pic">
+							<img src="img/people/alex.png">
+						</div>
+					</div>
+					<div class="team_block_case">
+						<div class="team_block_title">
+							<div class="team_block_title_name font_bold">Наталия</div>
+							<div class="team_block_title_pos">CFO</div>
+						</div>
+						<div class="team_block_case_pic">
+							<img src="img/people/nataly.png">
+						</div>
+					</div>
+					<div class="team_block_case">
+						<div class="team_block_title">
+							<div class="team_block_title_name font_bold">Илхом</div>
+							<div class="team_block_title_pos">Heads of Production</div>
+						</div>
+						<div class="team_block_case_pic">
+							<img src="img/people/ilhom.png">
+						</div>
+					</div>
+					<div class="team_block_case">
+						<div class="team_block_title">
+							<div class="team_block_title_name font_bold">Егор</div>
+							<div class="team_block_title_pos">CBO</div>
+						</div>
+						<div class="team_block_case_pic">
+							<img src="img/people/egor.png">
+						</div>
+					</div>
+					<div class="team_block_case">
+						<div class="team_block_title">
+							<div class="team_block_title_name font_bold">Антон</div>
+							<div class="team_block_title_pos">CTO</div>
+						</div>
+						<div class="team_block_case_pic">
+							<img src="img/people/anton.png">
+						</div>
+					</div>
+					<div class="team_block_case">
+						<div class="team_block_title">
+							<div class="team_block_title_name font_bold">Анастасия</div>
+							<div class="team_block_title_pos">Art-Director</div>
+						</div>
+						<div class="team_block_case_pic">
+							<img src="img/people/nasty.png">
+						</div>
+					</div>
+					<div class="team_block_case">
+						<div class="team_block_title">
+							<div class="team_block_title_name font_bold">Стас</div>
+							<div class="team_block_title_pos">Business Analyst</div>
+						</div>
+						<div class="team_block_case_pic">
+							<img src="img/people/stas.png">
+						</div>
+					</div>
+					<div class="team_block_case">
+						<div class="team_block_title">
+							<div class="team_block_title_name font_bold">Игорь</div>
+							<div class="team_block_title_pos">Team leader Android</div>
+						</div>
+						<div class="team_block_case_pic">
+							<img src="img/people/igor.png">
+						</div>
+					</div>
+					<div class="team_block_case">
+						<div class="team_block_title">
+							<div class="team_block_title_name font_bold">Александр</div>
+							<div class="team_block_title_pos">Team leader iOS</div>
+						</div>
+						<div class="team_block_case_pic">
+							<img src="img/people/alexios.png">
+						</div>
+					</div>
+					<div class="cle"></div>
+				</div>
+			</div>
+		</div>
+		
+		<!--
+		<div class="company_big_photo block_can_appear">
+			<img src="img/company_big_photo.jpg">
+		</div>
+		-->
+		
+		<div class="block_contain gocontacts block_can_appear" id="contacts">
+			<div class="main_content">
+				<div>
+					<div class="about_block">
+						<div class="contain_title font_bold block_can_appear">Санкт-Петербург</div>
+						<div class="contain_text block_can_appear">
+							<span class="font_med">Головной офис компании</span>
+							<br>
+							Адрес: наб. Обводного канала, 199-201
+							<br>
+							Телефон: +7 (812) 407-31-00
+							<br>
+							Почта: <a href="mailto:hello@handh.ru" target="_blank" class="about_email">hello@handh.ru</a>
+						</div>
+					</div>
+					<div class="about_block_numbers">
+						<div class="contain_title font_bold block_can_appear">Москва</div>
+						<div class="contain_text block_can_appear">
+							<span class="font_med">Представительство</span>
+							<br>
+							Телефон: +7 (495) 565-30-74
+						</div>
+					</div>
+					<div class="cle"></div>
+				</div>
+				<div class="footer_line"></div>
+				<div class="footer_social block_can_appear">
+					<a href="https://www.behance.net/headsandhands" target="_blank"><img src="img/social/be.svg"></a>
+					<a href="https://dribbble.com/HeadsandHands" target="_blank"><img src="img/social/dr.svg"></a>
+					<a href="https://www.instagram.com/headsandhands/" target="_blank"><img src="img/social/insta.svg"></a>
+					<a href="https://twitter.com/heads_hands" target="_blank"><img src="img/social/tw.svg"></a>
+					<a href="https://www.facebook.com/HeadsandHands" target="_blank"><img src="img/social/fb.svg"></a>
+					<a href="https://vk.com/handhru" target="_blank"><img src="img/social/vk.svg"></a>
+					<a href="https://www.youtube.com/channel/UCzAR99V_r75RT-09Aa5NE_w" target="_blank"><img src="img/social/yt.svg"></a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="block_contain gogrey">
+			<div class="main_content">
+				<div class="feed_ico"><img src="img/utka.png"></div>
+				<div class="feed_text">
+					<div class="block_service_title font_bold">Остались вопросы?</div>
+					<div class="contain_text">
+						Запишитесь на консультацию. Предварительно опишите суть вашего проекта и&nbsp;возникшие вопросы в&nbsp;онлайн-форме. Мы&nbsp;подробно обо всем расскажем. 
+					</div>
+				</div>
+				<a href="https://docs.google.com/forms/d/1uB41LDzPe3cgJQiVIhhlWv4D2rWBODq35saL-mmd2AM/viewform?edit_requested=true" target="_blank" class="feed_but">Записаться</a>
+				<div class="cle"></div>
+			</div>
+		</div>
+		
+		<!--
+		<a href="#" target="_blank" class="allcases_handh gocontacts block_can_appear">
+			<div class="main_content">
+				<div class="allcases_handh_ico"><img src="img/goallcases.svg"></div>
+				Оставить заявку <span class="allcases_handh_br">на&nbsp;консультацию</span>
+			</div>
+		</a>
+		-->
+		<!--
+		<div class="footer block_can_appear">
+			<a href="#handh" rel="handh" class="footer_logo block_can_appear menu_move_to"><img src="img/footer_logo.svg"></a>
+			<div class="footer_social block_can_appear">
+				<a href="#" target="_blank"><img src="img/social/be.svg"></a>
+				<a href="#" target="_blank"><img src="img/social/dr.svg"></a>
+				<a href="#" target="_blank"><img src="img/social/insta.svg"></a>
+				<a href="#" target="_blank"><img src="img/social/tw.svg"></a>
+				<a href="#" target="_blank"><img src="img/social/fb.svg"></a>
+				<a href="#" target="_blank"><img src="img/social/vk.svg"></a>
+				<a href="#" target="_blank"><img src="img/social/yt.svg"></a>
+			</div>
+			<div class="block_can_appear">
+				<a href="https://tagline.ru/heads-and-hands" target="_blank" class="footer_desc">
+					*Heads and Hands на&nbsp;шестом&nbsp;месте
+					<br>
+					среди лучших мобильных разработчиков&nbsp;России
+					<br>
+					по&nbsp;версии&nbsp;Tagline
+				</a>
+			</div>
+		</div>
+		-->
+	</div>
 	
 </body>
 </html>
