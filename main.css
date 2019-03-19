@@ -142,6 +142,7 @@
 	z-index: 106;
 	-webkit-animation: maindisplay_pic_ani 4s ease infinite;
 	animation: maindisplay_pic_ani 4s ease infinite;
+	z-index: 104;
 }
 
 @keyframes maindisplay_pic_ani {
