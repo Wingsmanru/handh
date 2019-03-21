@@ -902,6 +902,7 @@
 	width: 20px;
 	height: 20px;
 	margin: 10px auto;
+	z-index: 999;
 }
 
 .point_inside{
@@ -914,6 +915,30 @@
 	opacity: 0.5;
 	border-radius: 10px;
 	transition: all 0.3s;
+}
+
+.point_menu_text{
+	position: absolute;
+	top: -5px;
+	left: -360px;
+	width: 180px;
+	height: 30px;
+	background-color: rgba(0,0,0,0.7);
+	padding: 5px 20px;
+	box-sizing: border-box;
+	color: #fff;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: left;
+	border-radius: 15px;
+	overflow: hidden;
+	transition: all 0.5s;
+	opacity: 0;
+}
+
+.point_menu:hover .point_menu_text{
+	left: 20px;
+	opacity: 1;
 }
 
 .point_inside.point_1{
