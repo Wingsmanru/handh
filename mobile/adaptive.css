@@ -21,6 +21,25 @@
 		width: auto;
 	}
 	
+	.news_case{
+		padding-top: 30px;
+	}
+	
+	.news_case_title{
+		font-size: 24px;
+		line-height: 30px;
+	}
+
+	.news_case_subtitle{
+		font-size: 18px;
+		line-height: 24px;
+	}
+	
+	.team_block_case_award{
+		font-size: 16px;
+		line-height: 24px;
+	}
+	
 }
 
 @media (max-width : 1460px) {
@@ -160,10 +179,7 @@
 	}
 	
 	.feed_but{
-		width: 180px;
-		height: 50px;
-		font-size: 24px;
-		line-height: 50px;
+		font-size: 18px;
 	}
 	
 	.team_block_award{
@@ -196,18 +212,19 @@
 		margin-bottom: 40px;
 	}
 	
-	.feed_but{
-		float: none;
-		width: 140px;
-		height: 40px;
-		font-size: 18px;
-		line-height: 40px;
-	}
-	
 	.case_block_pic_prev.goweb{
 		top: 160px;
 		width: 484px;
 		margin-left: -242px;
+	}
+	
+	.news_case{
+		width: 48%;
+		margin-bottom: 40px;
+	}
+	
+	.news_case:nth-child(2n){
+		margin-right: 0;
 	}
 }
 
@@ -452,6 +469,20 @@
 	
 	.next_team{
 		width: 120px;
+	}
+	
+	.news_case{
+		float: none;
+		width: 100%;
+		margin-right: 0;
+	}
+	
+	
+	
+	.feed_but{
+		float: none;
+		height: 40px;
+		line-height: 40px;
 	}
 	
 }
