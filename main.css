@@ -502,8 +502,13 @@
 	background-color: #292929;
 }
 
+.block_contain.notopmargin{
+	padding-top: 0;
+}
+
 .company_big_photo{
 	width: 100%;
+	background-color: #000;
 }
 
 .company_big_photo img{
@@ -520,29 +525,39 @@
 	background-color: #f1f1f1;
 }
 
+.block_team.gowhite{
+	background-color: #fff;
+}
+
 .team_block{
 	width: 5000px;
 }
 
 .team_block_case{
+	position: relative;
 	float: left;
 	width: 300px;
 	height: 400px;
 	margin-right: 100px;
+	outline: none;
 }
 
 .team_block_title{
 	height: 100px;
 }
 
+.team_block_title.goawards{
+	height: auto;
+}
+
 .team_block_title_name{
 	font-size: 24px;
-	line-height: 36px;
+	line-height: 32px;
 }
 
 .team_block_title_pos{
 	font-size: 20px;
-	line-height: 30px;
+	line-height: 34px;
 }
 
 .team_block_case_pic{
@@ -556,6 +571,22 @@
 	height: auto;
 }
 
+.team_block_case_award{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.team_block_award{
+	width: 80px;
+	margin-bottom: 10px;
+}
+
+.team_block_award img{
+	width: 100%;
+	height: auto;
+}
+
 .next_team{
 	position: absolute;
 	bottom: 0;
@@ -564,6 +595,10 @@
 	height: 400px;
 	background-color: rgba(241,241,241,0.9);
 	z-index: 10;
+}
+
+.next_team.gowhite{
+	background-color: rgba(255,255,255,0.9);	
 }
 
 .next_team_ico{
@@ -1012,4 +1047,8 @@
     -ms-transform: translate(0px, 0px); /* Для IE */
     -webkit-transform: translate(0px, 0px); /* Для Safari, Chrome, iOS */
     -o-transform: translate(0px, 0px); /* Для Opera */
+}
+
+#office div {
+	display: block !important;
 }

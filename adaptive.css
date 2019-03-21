@@ -133,7 +133,7 @@
 	}
 	
 	.next_team{
-		width: 170px;
+		width: 140px;
 		height: 300px;
 	}
 
@@ -164,6 +164,10 @@
 		height: 50px;
 		font-size: 24px;
 		line-height: 50px;
+	}
+	
+	.team_block_award{
+		width: 40px;
 	}
 	
 }
