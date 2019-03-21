@@ -861,15 +861,16 @@
 .feed_but{
 	display: block;
 	float: right;
-	width: 240px;
-	height: 60px;
+	width: auto;
+	height: 50px;
+	padding: 0 30px;
 	border-radius: 30px;
 	background-color: #fbcf4d;
 	overflow: hidden;
 	text-align: center;
 	color: #000;
-	font-size: 30px;
-	line-height: 60px;
+	font-size: 24px;
+	line-height: 50px;
 	transition: all 0.3s;
 }
 
@@ -919,8 +920,8 @@
 
 .point_menu_text{
 	position: absolute;
-	top: -5px;
-	left: -360px;
+	top: 240px;
+	left: 30px;
 	width: 180px;
 	height: 30px;
 	background-color: rgba(0,0,0,0.7);
@@ -937,7 +938,7 @@
 }
 
 .point_menu:hover .point_menu_text{
-	left: 20px;
+	top: -5px;
 	opacity: 1;
 }
 
