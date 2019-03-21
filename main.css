@@ -506,6 +506,10 @@
 	padding-top: 0;
 }
 
+.block_contain.nobottommargin{
+	padding-bottom: 0;
+}
+
 .company_big_photo{
 	width: 100%;
 	background-color: #000;
@@ -702,6 +706,64 @@
 .client_logo img{
 	width: 100%;
 	height: auto;
+}
+
+.news_case{
+	display: block;
+	position: relative;
+	float: left;
+	width: 22%;
+	height: auto;
+	padding-top: 30px;
+	color: #fff;
+	text-align: center;
+	background-color: #000;
+	margin-right: 4%;
+	transition: all 0.3s;
+}
+
+.news_case:nth-child(4n){
+	margin-right: 0;
+}
+
+.news_case:hover{
+	background-color: #f1f1f1 !important;
+}
+
+.news_case:hover .news_case_title{
+	color: #000 !important;
+}
+
+.news_case:hover .news_case_subtitle{
+	color: #000 !important;
+}
+
+.news_case_pic{
+	width: 100%;
+}
+
+.news_case_pic img{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.news_case_title{
+	width: 100%;
+	color: #fff;
+	text-align: center;
+	font-size: 24px;
+	line-height: 30px;
+	margin-bottom: 4px;
+	transition: all 0.3s;
+}
+
+.news_case_subtitle{
+	color: #fff;
+	font-size: 18px;
+	line-height: 24px;
+	margin-bottom: 30px;
+	transition: all 0.3s;
 }
 
 .footer{
