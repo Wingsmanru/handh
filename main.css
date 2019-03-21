@@ -714,7 +714,7 @@
 	float: left;
 	width: 22%;
 	height: auto;
-	padding-top: 30px;
+	padding-top: 40px;
 	color: #fff;
 	text-align: center;
 	background-color: #000;
@@ -752,16 +752,16 @@
 	width: 100%;
 	color: #fff;
 	text-align: center;
-	font-size: 24px;
-	line-height: 30px;
+	font-size: 36px;
+	line-height: 40px;
 	margin-bottom: 4px;
 	transition: all 0.3s;
 }
 
 .news_case_subtitle{
 	color: #fff;
-	font-size: 18px;
-	line-height: 24px;
+	font-size: 24px;
+	line-height: 30px;
 	margin-bottom: 30px;
 	transition: all 0.3s;
 }

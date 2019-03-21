@@ -21,6 +21,20 @@
 		width: auto;
 	}
 	
+	.news_case{
+		padding-top: 30px;
+	}
+	
+	.news_case_title{
+		font-size: 24px;
+		line-height: 30px;
+	}
+
+	.news_case_subtitle{
+		font-size: 18px;
+		line-height: 24px;
+	}
+	
 }
 
 @media (max-width : 1460px) {
@@ -208,6 +222,15 @@
 		top: 160px;
 		width: 484px;
 		margin-left: -242px;
+	}
+	
+	.news_case{
+		width: 48%;
+		margin-bottom: 40px;
+	}
+	
+	.news_case:nth-child(2n){
+		margin-right: 0;
 	}
 }
 
@@ -452,6 +475,12 @@
 	
 	.next_team{
 		width: 120px;
+	}
+	
+	.news_case{
+		float: none;
+		width: 100%;
+		margin-right: 0;
 	}
 	
 }
